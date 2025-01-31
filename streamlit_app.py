@@ -25,7 +25,7 @@ def step_4():
     
     left, middle, right = st.columns(3)
     if left.button("Plain button", use_container_width=True):
-        left.markdown("You clicked the plain button.")
+        username = st.text_input("Username")
     if middle.button("Emoji button", icon="😃", use_container_width=True):
         middle.markdown("You clicked the emoji button.")
     if right.button("Material button", icon=":material/mood:", use_container_width=True):
