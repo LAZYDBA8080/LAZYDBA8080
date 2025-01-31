@@ -47,7 +47,7 @@ def reset():
 
 def main():
     st.sidebar.title("Form Wizard")
-    current_step = st.sidebar.selectbox("Step", ["Step 1", "Step 2", "Step 3"])
+    current_step = st.sidebar.selectbox("Step", ["Step 1", "Step 2", "Step 3", "Step 4"])
     
     
     if current_step == "Step 1":
@@ -60,7 +60,8 @@ def main():
     elif current_step == "Step 3":
         csv_file = step_3()
         next_step_button = st.sidebar.button("Submit")
-    elif current_step == "Step 3":
+        
+    elif current_step == "Step 4":
         input_list = step_4()
         st.text_area(input_list)
          
