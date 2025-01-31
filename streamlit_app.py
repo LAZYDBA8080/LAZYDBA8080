@@ -21,24 +21,15 @@ def step_3():
     csv_file = st.file_uploader("Choose a CSV file")
 
 def step_4():
-    features_list = []
+    import streamlit as st
     
-    # Display the text areas for each feature
-    for i in range(st.session_state.num_features):
-        feature = st.text_area(
-            f"What is the description of the feature {i + 1} and what type of users are involved in it?",
-            placeholder=f"Feature {i + 1}:\n...",
-            height=100,
-            key=f'new_feature_{i}'
-        )
-        features_list.append(feature)
-    
-    # Button to add more features
-    if st.button("Add Feature"):
-        st.session_state.num_features += 1
-        
-    # joining the input of features_list into a string.
-    answer3 = '\n'.join(features_list)
+    left, middle, right = st.columns(3)
+    if left.button("Plain button", use_container_width=True):
+        left.markdown("You clicked the plain button.")
+    if middle.button("Emoji button", icon="😃", use_container_width=True):
+        middle.markdown("You clicked the emoji button.")
+    if right.button("Material button", icon=":material/mood:", use_container_width=True):
+        right.markdown("You clicked the Material button.")
     
 def reset():
     username, password, account, warehouse = "", "", "", ""
@@ -63,7 +54,6 @@ def main():
         
     elif current_step == "Step 4":
         input_list = step_4()
-        st.text_area(input_list)
          
         
     
