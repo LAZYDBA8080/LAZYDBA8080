@@ -59,7 +59,7 @@ def main():
     
     elif current_step == "Step 3":
         csv_file = step_3()
-                        next_step_button = st.sidebar.button("Submit")
+        next_step_button = st.sidebar.button("Submit")
         
     elif current_step == "Step 4":
         input_list = step_4()
