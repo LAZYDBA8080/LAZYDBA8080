@@ -58,8 +58,8 @@ def step_5():
         if save_data:
             df = pd.DataFrame(
                 {
-                    "Adv Name": [adv_name],
-                    "Client Name": [client_name],
+                    "Adv Name": ["adv_name"],
+                    "Client Name": ["client_name"],
                 }
             )
             st.dataframe(df)
