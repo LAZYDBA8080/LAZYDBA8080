@@ -40,6 +40,7 @@ def step_5():
     if add_cust:
         adv_name = st.text_input("Adv Name")
         client_name = st.text_input("Client Name")
+        client_name2 = st.text_input("Client Name2")
         if adv_name is not None or client_name is not None:
             df = pd.DataFrame(
                     {
@@ -58,8 +59,8 @@ def step_5():
         if save_data:
             df = pd.DataFrame(
                 {
-                    "Adv Name": ["adv_name"],
-                    "Client Name": ["client_name"],
+                    "Adv Name": ["adv_name2"],
+                    "Client Name": ["client_name2"],
                 }
             )
             st.dataframe(df)
