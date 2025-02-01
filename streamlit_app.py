@@ -39,7 +39,8 @@ def step_5():
             adv_name = st.text_area("Adv Name")
         with col2:
             client_name = st.text_area("Client Name")
-        
+        st.write(adv_name)
+        st.write(client_name)
     if st.button("Say hello"):
         st.write("Why hello there")
     else:
