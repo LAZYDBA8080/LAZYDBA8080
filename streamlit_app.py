@@ -4,8 +4,6 @@ import pandas as pd
 from datetime import date
 
 
-st.dataframe(df, column_config=config)
-
 def step_1():
     st.title("Step 1: Snowflake Credentials")
     username = st.text_input("Username")
