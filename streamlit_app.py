@@ -36,6 +36,22 @@ def step_4():
         right.markdown("You clicked the Material button.")
 
 def step_5():
+    col1, col2 = st.columns(2)
+    with col1:
+        consumer_name = st.text_input("consumer_name")
+    
+    with col2:
+        data_share_using = st.selectbox("Data Share using", ("Reader Account", "Direct Share"), )
+    
+    col3, col4, col5 = st.columns(2)
+    with col3:
+        snowflake_cloud_region = st.selectbox("IP Whitelist required", ("Yes", "No"),)
+
+    with col4:
+        snowflake_cloud_region = st.text_input("Consumer Account Identifier")
+
+    with col5:
+        snowflake_cloud_region = st.text_input("Snowflake Cloud Region")
     adv_name = st.text_input("Adv Name")
     client_name = st.text_input("Client Name")
     client_name2 = st.text_input("Client Name2")
