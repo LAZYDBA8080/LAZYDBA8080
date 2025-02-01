@@ -43,8 +43,8 @@ def step_5():
         if adv_name is not None or client_name is not None:
             df = pd.DataFrame(
                     {
-                        "Adv Name": [adv_name],
-                        "Client Name": [client_name],
+                        "Adv Name": ["adv_name"],
+                        "Client Name": ["client_name"],
                     }
                 )
             st.dataframe(df)
