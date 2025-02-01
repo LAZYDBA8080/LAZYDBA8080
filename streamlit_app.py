@@ -41,14 +41,13 @@ def step_5():
         adv_name = st.text_input("Adv Name")
         client_name = st.text_input("Client Name")
         client_name2 = st.text_input("Client Name2")
-        if adv_name is not None or client_name is not None:
-            df = pd.DataFrame(
-                    {
-                        "Adv Name": ["adv_name"],
-                        "Client Name": ["client_name"],
-                    }
-                )
-            st.dataframe(df)
+        df = pd.DataFrame(
+                {
+                    "Adv Name": [adv_name],
+                    "Client Name": [client_name],
+                }
+            )
+        st.dataframe(df)
         
         # col1, col2 = st.columns(2)
         # with col1:
