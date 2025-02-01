@@ -38,13 +38,13 @@ def step_4():
 def step_5():
     add_cust = st.button("ADD Customer", type="primary")
     if add_cust:
-        # st.text_input("Adv Name")
-        # st.text_input("Client Name")
-        col1, col2 = st.columns(2)
-        with col1:
-            adv_name = st.text_input("Adv Name")
-        with col2:
-            client_name = st.text_input("Client Name")
+        adv_name = st.text_input("Adv Name")
+        client_name = st.text_input("Client Name")
+        # col1, col2 = st.columns(2)
+        # with col1:
+        #     adv_name = st.text_input("Adv Name")
+        # with col2:
+        #     client_name = st.text_input("Client Name")
         save_data = st.button("Save", type="primary")
         if save_data:
             df = pd.DataFrame(
@@ -58,9 +58,9 @@ def step_5():
             return df
 
 
-    df = pd.DataFrame(np.random.randn(10, 20), columns=("col %d" % i for i in range(20)))
+    # df = pd.DataFrame(np.random.randn(10, 20), columns=("col %d" % i for i in range(20)))
     
-    st.dataframe(df.style.highlight_max(axis=0))
+    # st.dataframe(df.style.highlight_max(axis=0))
 
 def reset():
     username, password, account, warehouse = "", "", "", ""
