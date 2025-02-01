@@ -52,15 +52,8 @@ def step_5():
                 }
             )
             st.dataframe(df)
+    return df
 
-    
-    if st.button("Say hello"):
-        st.write("Why hello there")
-    else:
-        st.write("Goodbye")
-    
-    if st.button("Aloha", type="tertiary"):
-        st.write("Ciao")
 def reset():
     username, password, account, warehouse = "", "", "", ""
     schema, table = "", ""
@@ -86,7 +79,7 @@ def main():
         input_list = step_4()
         
     elif current_step == "Step 5":
-        step_5()
+        cust_df = step_5()
          
 
     
