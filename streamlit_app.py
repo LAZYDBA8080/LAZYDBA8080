@@ -47,7 +47,7 @@ def step_5():
         st.write(data_share_using)
         snowflake_cloud_region = st.selectbox("IP Whitelist required", ("Yes", "No"),)
     else:
-         col3, col4 = st.columns(2)
+        col3, col4 = st.columns(2)
         with col3:
             snowflake_acc_identifier = st.text_input("Consumer Account Identifier")
     
