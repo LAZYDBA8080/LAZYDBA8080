@@ -36,35 +36,33 @@ def step_4():
         right.markdown("You clicked the Material button.")
 
 def step_5():
-    add_cust = st.button("ADD Customer", type="primary")
-    if add_cust:
-        adv_name = st.text_input("Adv Name")
-        client_name = st.text_input("Client Name")
-        client_name2 = st.text_input("Client Name2")
+    adv_name = st.text_input("Adv Name")
+    client_name = st.text_input("Client Name")
+    client_name2 = st.text_input("Client Name2")
+    df = pd.DataFrame(
+            {
+                "Adv Name": [adv_name],
+                "Client Name": [client_name],
+            }
+        )
+    st.dataframe(df)
+    
+    # col1, col2 = st.columns(2)
+    # with col1:
+    #     adv_name = st.text_input("Adv Name")
+    # with col2:
+    #     client_name = st.text_input("Client Name")
+    save_data = st.button("Save", type="primary")
+    if save_data:
         df = pd.DataFrame(
-                {
-                    "Adv Name": [adv_name],
-                    "Client Name": [client_name],
-                }
-            )
+            {
+                "Adv Name": ["adv_name2"],
+                "Client Name": ["client_name2"],
+            }
+        )
         st.dataframe(df)
         
-        # col1, col2 = st.columns(2)
-        # with col1:
-        #     adv_name = st.text_input("Adv Name")
-        # with col2:
-        #     client_name = st.text_input("Client Name")
-        save_data = st.button("Save", type="primary")
-        if save_data:
-            df = pd.DataFrame(
-                {
-                    "Adv Name": ["adv_name2"],
-                    "Client Name": ["client_name2"],
-                }
-            )
-            st.dataframe(df)
-            
-            return df
+        return df
 
 
     # df = pd.DataFrame(np.random.randn(10, 20), columns=("col %d" % i for i in range(20)))
