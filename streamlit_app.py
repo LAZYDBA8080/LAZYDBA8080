@@ -40,6 +40,14 @@ def step_5():
     if add_cust:
         adv_name = st.text_input("Adv Name")
         client_name = st.text_input("Client Name")
+        df = pd.DataFrame(
+                {
+                    "Adv Name": [adv_name],
+                    "Client Name": [client_name],
+                }
+            )
+        st.dataframe(df)
+        
         # col1, col2 = st.columns(2)
         # with col1:
         #     adv_name = st.text_input("Adv Name")
