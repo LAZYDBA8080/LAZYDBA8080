@@ -36,9 +36,9 @@ def step_5():
     if add_cust:
         col1, col2 = st.columns(2)
         with col1:
-            adv_name = st.text_area("Adv Name")
+            adv_name = st.text_input("Adv Name")
         with col2:
-            client_name = st.text_area("Client Name")
+            client_name = st.text_input("Client Name")
         st.write(adv_name)
         st.write(client_name)
     if st.button("Say hello"):
