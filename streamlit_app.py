@@ -52,7 +52,7 @@ def step_5():
                 }
             )
             st.dataframe(df)
-    return df
+            return df
 
 def reset():
     username, password, account, warehouse = "", "", "", ""
