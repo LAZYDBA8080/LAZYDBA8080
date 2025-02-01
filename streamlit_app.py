@@ -1,4 +1,10 @@
 import streamlit as st
+import streamlit as st
+import pandas as pd
+from datetime import date
+
+
+st.dataframe(df, column_config=config)
 
 def step_1():
     st.title("Step 1: Snowflake Credentials")
@@ -39,8 +45,17 @@ def step_5():
             adv_name = st.text_input("Adv Name")
         with col2:
             client_name = st.text_input("Client Name")
-        st.write(adv_name)
-        st.write(client_name)
+        save_data = st.button("Save", type="primary")
+        if save_data:
+            df = pd.DataFrame(
+                {
+                    "Adv Name": [adv_name],
+                    "Client Name": [client_name],
+                }
+            )
+            st.dataframe(df)
+
+    
     if st.button("Say hello"):
         st.write("Why hello there")
     else:
