@@ -30,7 +30,16 @@ def step_4():
         middle.markdown("You clicked the emoji button.")
     if right.button("Material button", icon=":material/mood:", use_container_width=True):
         right.markdown("You clicked the Material button.")
+
+def step_5():
+    st.button("Reset", type="primary")
+    if st.button("Say hello"):
+        st.write("Why hello there")
+    else:
+        st.write("Goodbye")
     
+    if st.button("Aloha", type="tertiary"):
+        st.write("Ciao")
 def reset():
     username, password, account, warehouse = "", "", "", ""
     schema, table = "", ""
@@ -38,7 +47,7 @@ def reset():
 
 def main():
     st.sidebar.title("Form Wizard")
-    current_step = st.sidebar.selectbox("Step", ["Step 1", "Step 2", "Step 3", "Step 4"])
+    current_step = st.sidebar.selectbox("Step", ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"])
     
     
     if current_step == "Step 1":
@@ -50,12 +59,15 @@ def main():
     
     elif current_step == "Step 3":
         csv_file = step_3()
-        next_step_button = st.sidebar.button("Submit")
+                        next_step_button = st.sidebar.button("Submit")
         
     elif current_step == "Step 4":
         input_list = step_4()
-         
         
+    elif current_step == "Step 5":
+        step_5()
+         
+
     
     
     if st.sidebar.button("Reset", key="reset"):
